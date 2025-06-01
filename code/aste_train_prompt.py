@@ -10,7 +10,8 @@ import pytorch_lightning as pl
 pl.seed_everything(42)
 
 from transformers import AutoTokenizer, AutoConfig
-from transformers.optimization import AdamW
+# from transformers.optimization import AdamW
+from torch.optim import AdamW
 from pytorch_lightning.utilities import rank_zero_info
 from transformers import (
     get_linear_schedule_with_warmup,
