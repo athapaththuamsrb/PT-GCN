@@ -10,8 +10,7 @@ import pytorch_lightning as pl
 pl.seed_everything(42)
 
 from transformers import AutoTokenizer, AutoConfig
-# from transformers.optimization import AdamW
-from torch.optim import AdamW
+from transformers.optimization import AdamW
 from pytorch_lightning.utilities import rank_zero_info
 from transformers import (
     get_linear_schedule_with_warmup,
@@ -213,7 +212,6 @@ class LoggingCallback(pl.Callback):
 
 def main():
     parser = argparse.ArgumentParser()
-    print(parser)
     parser = pl.Trainer.add_argparse_args(parser)
     parser = ASTE.add_model_specific_args(parser)
     parser = ASTEDataModule.add_argparse_args(parser)
