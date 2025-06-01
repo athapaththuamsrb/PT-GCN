@@ -46,7 +46,7 @@ eval_batch_size=1
 data_dir="../data/ASTE-V2/${dataset}"
 
 #${CUDA_IDS}
-CUDA_VISIBLE_DEVICES=${CUDA_IDS} python3 aste_train_prompt_ada.py \
+CUDA_VISIBLE_DEVICES=${CUDA_IDS} python3 aste_train_prompt.py \
   --gpus=1 \
   --precision=${precision} \
   --data_dir ${data_dir} \
