@@ -213,6 +213,7 @@ class LoggingCallback(pl.Callback):
 
 def main():
     parser = argparse.ArgumentParser()
+    print(parser)
     parser = pl.Trainer.add_argparse_args(parser)
     parser = ASTE.add_model_specific_args(parser)
     parser = ASTEDataModule.add_argparse_args(parser)
